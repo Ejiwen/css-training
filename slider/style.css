@@ -4,9 +4,9 @@
   }
 
   .slider-wrap {
-      margin: 60px 60px;
-      width: 300px;
-    height: 300px;
+     width: 300px;
+     height: 300px;
+     margin: 60px 60px;
   }
 
 .slider {
@@ -18,12 +18,12 @@
         Isn't supported on Chrome
     */
     scroll-snap-type: x mandatory;
-     
-
     /* Smoothly animate instead of a straight jump */
     scroll-behavior: smooth; 
   }
 
+   
+  /* the scrollbar style */
   .slider::-webkit-scrollbar {
     width: 10px;
     height: 10px;

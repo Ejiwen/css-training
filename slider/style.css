@@ -1,3 +1,50 @@
-.content {
-    background-color: darkolivegreen;
-}
+* {
+    /*  padding and border are included in the width and height */
+    box-sizing: border-box;
+  }
+
+.slider {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+    /*  how strictly snap points are enforced 
+        Isn't supported on Chrome
+    */
+    scroll-snap-type: x mandatory;
+     
+
+    /* Smoothly animate instead of a straight jump */
+    scroll-behavior: smooth; 
+  }
+
+  .slider::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slider::-webkit-scrollbar-thumb {
+    background: rgb(12, 190, 51);
+    border-radius: 10px;
+  }
+
+  .slider::-webkit-scrollbar-thumb:hover {
+    background: rgb(4, 80, 20);
+  }
+
+  .slider::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+
+  .slide {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+    border: 1px solid green;
+    border-radius: 5px;
+    background: bisque;
+    display: flex;
+    justify-content: center; /* X axis */ 
+    align-items: center; /* Y axis */ 
+    margin-right: 20px;
+  }

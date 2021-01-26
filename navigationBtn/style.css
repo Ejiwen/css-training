@@ -26,6 +26,7 @@
     top: 6rem;
     right: 6rem;
     z-index: 2000;
+    box-shadow: 0 1rem 3rem black .1;
   }
 
   .nav-bg {
@@ -37,16 +38,19 @@
     right: 6.5rem;
     background-image: radial-gradient(rgb(255, 251, 15), darkgreen);
     z-index: 1000;
-    transform: scale(30);
+    /* transform: scale(30); */
   }
 
   nav {
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1500;
+
+    opacity: 0;
+    width: 0;
   }
 
   .nav-list {
@@ -78,4 +82,15 @@
     background-position: 100%;
     color: black;
     transform: translateX(1rem);
+  }
+
+
+  /* the part 2 */
+  .nav-checkbox:checked ~ .nav-bg {
+    transform: scale(30);
+  }
+
+  .nav-checkbox:checked ~ nav {
+    opacity: 1;
+    width: 100%;
   }

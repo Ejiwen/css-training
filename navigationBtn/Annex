@@ -28,4 +28,9 @@ background-image: radial-gradient(shape size at position, start-color, ..., last
 By default, shape is ellipse, size is farthest-corner, and position is center.
 https://www.w3schools.com/css/css3_gradients_radial.asp
 
+
+General Sibling Selector (~)
+The general sibling selector selects all elements that are siblings of a specified element.
+
+
 ----------------------------------

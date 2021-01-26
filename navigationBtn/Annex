@@ -1,4 +1,31 @@
+linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+We have to set an angle degree to gvet the animation work.
+https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient()
 
 
+background-size: 220%; The background-size CSS property sets the size 
+of the element's background image. The image can be left to its natural size,
+stretched, or constrained to fit the available space.
+
+background-position: 100%; The background-position property sets the 
+starting position of a background image.
+
+transition: all .4s; CSS transitions allows you to change property values 
+smoothly, over a given duration.
+https://www.w3schools.com/css/css3_transitions.asp
+
+
+
+transform: translateX(1rem); The transform property applies a 2D or 3D 
+transformation to an element. This property allows you to rotate, scale, 
+move, skew, etc., elements.
+https://www.w3schools.com/cssref/css3_pr_transform.asp
+
+
+background-image: radial-gradient(rgb(255, 251, 15), darkgreen);
+To create a radial gradient you must also define at least two color stops.
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+By default, shape is ellipse, size is farthest-corner, and position is center.
+https://www.w3schools.com/css/css3_gradients_radial.asp
 
 ----------------------------------

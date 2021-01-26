@@ -37,7 +37,6 @@
     right: 6.5rem;
     background-image: radial-gradient(rgb(255, 251, 15), darkgreen);
     z-index: 1000;
-
     transform: scale(30);
   }
 

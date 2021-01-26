@@ -27,6 +27,8 @@
     right: 6rem;
     z-index: 2000;
     box-shadow: 0 1rem 3rem black .1;
+    text-align: center;
+    cursor: pointer;
   }
 
   .nav-bg {
@@ -39,6 +41,7 @@
     background-image: radial-gradient(rgb(255, 251, 15), darkgreen);
     z-index: 1000;
     /* transform: scale(30); */
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1) ; /* video 2 */
   }
 
   nav {
@@ -49,8 +52,10 @@
     right: 0;
     z-index: 1500;
 
+    /* video 2 */
     opacity: 0;
     width: 0;
+    transition: all .8s;
   }
 
   .nav-list {
@@ -87,10 +92,59 @@
 
   /* the part 2 */
   .nav-checkbox:checked ~ .nav-bg {
-    transform: scale(30);
+    transform: scale(50);
   }
 
   .nav-checkbox:checked ~ nav {
     opacity: 1;
     width: 100%;
   }
+
+    /* The part 3 ... menu icon */
+    .nav-icon {
+      position: relative;
+      margin-top: 3.5rem;
+    }
+
+  .nav-icon, .nav-icon::before, .nav-icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: grey;
+    display: inline-block;
+  }
+
+  .nav-icon::before, .nav-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+  }
+
+  .nav-icon::before {
+    top: -1rem;
+  }
+  .nav-icon::after{
+    top: 1rem;
+  }
+
+  .nav-btn:hover .nav-icon::before {
+    top: -1.2rem;
+  }
+
+  .nav-btn:hover .nav-icon::after{
+    top: 1.2rem;
+  }
+
+  .nav-checkbox:checked + .nav-btn .nav-icon {
+     background-color: transparent; /* to make the element disappear */
+  }
+
+  .nav-checkbox:checked + .nav-btn .nav-icon::before {
+    top: 0; /* to make the lines across each other */
+    transform: rotate(135deg);
+ }
+
+ .nav-checkbox:checked + .nav-btn .nav-icon::after {
+   top: 0; /* to make the lines across each other */
+  transform: rotate(-135deg);
+}

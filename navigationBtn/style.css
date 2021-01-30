@@ -22,7 +22,7 @@
 }
 
 .navCheckbox:checked ~ .navBg {
-  transform: scale(100);
+  transform: scale(200);
 }
 
 .navIcon {
@@ -93,11 +93,29 @@ nav {
   margin: 1rem;
 }
 
-.navLink {
+.navLink,
+.navLink:link,
+.navLink:visited {
   text-decoration: none;
+  display: inline-block;
   font-size: 2rem;
-  color: white;
-  background-image: linear-gradient(120)
+  padding: 5px;
+  color: rgb(240, 228, 228);
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    rgb(243, 243, 242) 50%
+  );
+  background-size: 230%;
+  transition: all 0.4s;
+}
+
+.navLink:hover,
+.navLink:active {
+  color: black;
+  background-position: 100%;
+  transform: translateX(1rem);
 }
 
 .navCheckbox:checked ~ nav {
